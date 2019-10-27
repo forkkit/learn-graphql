@@ -13,7 +13,7 @@ class Testimonials extends React.Component {
           designation: (<span>Instructor <b>@egghead.io</b></span>),
         },
         {
-          description: (<span>“This is a really great tutorial for people keen to learn more about GraphQL <span role="img" aria-labelledby="emoji">🚀</span> I just went through the React one, but they have tutorials for Vue, iOS and RN too <span role="img" aria-labelledby="emoji">💙</span> <a href="https://twitter.com/hashtag/2Hours2GraphQL?src=hash" target="_blank" rel="noopener noreferrer">#2Hours2GraphQL</a>.</span>),
+          description: (<span>“This is a really great tutorial for people keen to learn more about GraphQL <span role="img" aria-label="rocket emoji">🚀</span> I just went through the React one, but they have tutorials for Vue, iOS and RN too <span role="img" aria-label="heart emoji">💙</span> <a href="https://twitter.com/hashtag/2Hours2GraphQL?src=hash" target="_blank" rel="noopener noreferrer">#2Hours2GraphQL</a>.</span>),
           img: 'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/Sibylle.png',
           name: 'Sibylle',
           twitterLink: 'https://twitter.com/s_ibylle/status/1138143802831585280',
@@ -32,22 +32,22 @@ class Testimonials extends React.Component {
   render() {
     const listWrapper = this.state.testimonial.map((list, index) => {
       return (
-        <div key={index} className={'testimonialList'}>
-          <div className={'quotes'}>
-            <img src={'https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/quote.svg'} alt={'Quote'} />
+        <div key={index} className='testimonialList'>
+          <div className='quotes'>
+            <img src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/quote.svg' alt='Quote' />
           </div>
-          <div className={'testimonialContent'}>
+          <div className='testimonialContent'>
             {list.description}
           </div>
-          <div className={'authorWrapper'}>
-            <div className={'authorImg'}>
+          <div className='authorWrapper'>
+            <div className='authorImg'>
               <img src={list.img} alt={list.name} />
             </div>
-            <div className={'author'}>
-              <div className={'name'}>
-                <a href={list.twitterLink} target={'_blank'} rel="noopener noreferrer">{list.name}</a>
+            <div className='author'>
+              <div className='name'>
+                <a href={list.twitterLink} target='_blank' rel="noopener noreferrer">{list.name}</a>
               </div>
-              <div className={'designation'}>
+              <div className='designation'>
                 {list.designation}
               </div>
             </div>
@@ -57,20 +57,20 @@ class Testimonials extends React.Component {
     });
     return (
       /* Use global styles normally */
-      <div className={'whiteBgColor commonSectionWrapper'}>
-        <div className={'container noPadd'}>
-          <div className={'testimoialsWrapper wd80'}>
-            <div className={'sectionHeader'}>
+      <section className='whiteBgColor commonSectionWrapper'>
+        <div className='container noPadd'>
+          <div className='testimoialsWrapper wd80'>
+            <h1 className='sectionHeader' tabIndex={0}>
               Testimonials
+            </h1>
+            <div className='purpleLineSeperator'>
             </div>
-            <div className={'purpleLineSeperator'}>
-            </div>
-            <div className={'testimonialListWrapper'}>
+            <div className='testimonialListWrapper'>
               {listWrapper}
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

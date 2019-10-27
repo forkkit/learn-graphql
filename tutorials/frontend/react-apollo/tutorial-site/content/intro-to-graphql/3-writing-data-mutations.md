@@ -1,6 +1,6 @@
 ---
 title: Writing data - Mutations
-metaTitle: "GraphQL Mutations to insert data | GraphQL React Apollo Tutorial"
+metaTitle: "GraphQL Mutations to insert data | GraphQL React Apollo Components Tutorial"
 metaDescription: "Try out GraphQL Mutation using GraphiQL. A GraphQL mutation example with dynamic arguments and variables to insert data"
 ---
 
@@ -20,11 +20,11 @@ of your backend "mutating" or changing, just like typical `'POST'`,
 
 ## Basic mutations
 Since we're using Hasura for our GraphQL API, we get mutations for
-inserts, updates or deletes that we can use in our app.
+inserts, updates or deletes which we can use in our app.
 
-Let's try these mutations out in the context of a todo app to see
-what mutations look like. Mutations that you get from another GraphQL
-service, say if your API team has built their own,  might be different.
+Let's try out these mutations in the context of a todo app to see
+how mutations look like. Mutations that you get from other GraphQL
+services, say if your API team has built their own,  might be different.
 
 ### Create a todo
 
@@ -82,7 +82,7 @@ mutation {
 
 For mutations, we would almost always have to parameterise the arguments! We
 would rarely, if ever, have a "hardcoded" mutation in our app. This is because
-the arguments of what data to capture, how to modify or delete something is usually
+the argument of what data to capture, how to modify or delete something is usually
 dependent on some user action.
 
 Now that we know how to parameterise using query variables, let's use that:
@@ -118,4 +118,4 @@ This is a good start to grokking mutations!
 - You can make basic GraphQL mutations
 - You can pass dynamic arguments/data to mutations with query variables
 
-Next, let's look at GraphQL subscriptions
+Next, let's look at GraphQL subscriptions.
